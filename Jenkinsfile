@@ -1,25 +1,35 @@
 pipeline {
     agent any
+
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'master', url: 'https://github.com/Kaoutarelmorchad1/calculatrice-node.git'
-            }
-        }
         stage('Install') {
             steps {
                 bat 'npm install'
             }
         }
+
+        stage('Test') {
+            steps {
+                bat 'npm test'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Build Node.js application'
             }
         }
+
         stage('Run Server') {
             steps {
                 bat 'start /B node serveur.js'
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Bravo, déploiement réussi !'
         }
     }
 }
