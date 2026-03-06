@@ -5,9 +5,13 @@
   "main": "serveur.js",
   "scripts": {
     "start": "node serveur.js",
-    "test": "echo \"No tests defined\" && exit 0"
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0"
   }
 }

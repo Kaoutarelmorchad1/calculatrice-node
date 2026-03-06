@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.post('/add', (req, res) => {
     const { a, b } = req.body;
     const sum = a + b;
-    res.json({ result: a + b });
+    res.json({ result: sum });
 });
 
 // Démarrage du serveur
