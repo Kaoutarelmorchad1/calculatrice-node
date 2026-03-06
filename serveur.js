@@ -6,7 +6,7 @@ app.use(express.json());
 
 // Route GET racine
 app.get('/', (req, res) => {
-    res.send('Bienvenue sur la calculatrice Node.js !');
+    res.send('Bienvenue sur la calculatrice Nodejs !');
 });
 
 // Route POST addition
