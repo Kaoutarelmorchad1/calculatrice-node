@@ -4,13 +4,19 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Exemple : route addition
+// Route GET racine
+app.get('/', (req, res) => {
+    res.send('Bienvenue sur la calculatrice Node.js !');
+});
+
+// Route POST addition
 app.post('/add', (req, res) => {
     const { a, b } = req.body;
     const sum = a + b;
-    res.json({ result: sum });
+    res.json({ result: a + b });
 });
 
+// Démarrage du serveur
 app.listen(PORT, () => {
     console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
