@@ -1,0 +1,13 @@
+{
+  "name": "calculatrice-node",
+  "version": "1.0.0",
+  "description": "Application calculatrice avec Node.js et Express",
+  "main": "serveur.js",
+  "scripts": {
+    "start": "node serveur.js",
+    "test": "echo \"No tests defined\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
